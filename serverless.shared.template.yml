@@ -1,0 +1,22 @@
+custom:
+  webpack:
+    includeModules: true # true will include the node_module into the bundle
+
+  var:
+    cfnRole: ${self:custom.vars.${self:provider.stage}.cfnRole, self:custom.vars.default.cfnRole}
+   
+
+  vars:
+    default:
+      cfnRole: arn:aws:iam::933921178792:role/ias-iot-cf-role
+
+    local:
+
+    dev:
+
+    stg:
+
+    prd:
+
+environment:
+  ENV: ${self:provider.stage}
