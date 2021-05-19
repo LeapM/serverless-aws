@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --ignore-pattern '/node_modules/' --fix",
+    "type": "tsc --noEmit",
+    "check": "npm run type && npm run lint"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.76",
     "@types/node": "^15.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
+    "@typescript-eslint/parser": "^4.24.0",
+    "eslint": "^7.26.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "serverless-webpack": "^5.5.0",
     "ts-loader": "^9.1.2",
     "tsconfig-paths-webpack-plugin": "^3.5.1",

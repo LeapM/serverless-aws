@@ -1,5 +1,6 @@
 import { format } from 'date-fns'
 export const handler = async (event: unknown) => {
+  const x = 'abc'
   return {
     statusCode: 200,
     body: JSON.stringify(
