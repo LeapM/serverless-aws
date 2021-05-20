@@ -1,7 +1,7 @@
 custom:
   webpack:
     includeModules: true # true will include the node_module into the bundle
-
+    # webpackConfig: './webpack.config.js'
   var:
     cfnRole: ${self:custom.vars.${self:provider.stage}.cfnRole, self:custom.vars.default.cfnRole}
     strategyTable: ${self:custom.vars.${self:provider.stage}.strategyTable, self:custom.vars.default.strategyTable}

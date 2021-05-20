@@ -6,7 +6,8 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 module.exports = {
   mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
   entry: slsw.lib.entries,
-
+  devtool: slsw.lib.webpack.isLocal ? 'eval-cheap-module-source-map' : 'source-map',
+  devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     plugins: [new TsconfigPathsPlugin()],
