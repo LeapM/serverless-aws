@@ -4,11 +4,14 @@ custom:
 
   var:
     cfnRole: ${self:custom.vars.${self:provider.stage}.cfnRole, self:custom.vars.default.cfnRole}
+    strategyTable: ${self:custom.vars.${self:provider.stage}.strategyTable, self:custom.vars.default.strategyTable}
+
    
 
   vars:
     default:
       cfnRole: arn:aws:iam::933921178792:role/ias-iot-cf-role
+      strategyTable: stragety
 
     local:
 

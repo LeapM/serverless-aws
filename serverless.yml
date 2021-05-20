@@ -27,3 +27,6 @@ functions:
 
 plugins:
   - serverless-webpack
+
+resources:
+  ${file(./serverless.resource.yml)}
